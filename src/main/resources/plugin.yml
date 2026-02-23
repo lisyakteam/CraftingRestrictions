@@ -1,0 +1,7 @@
+name: CraftingRestrictions
+version: '1.0'
+main: me.junioraww.craftingrestrictions.Main
+api-version: '1.21'
+commands:
+  get-license:
+    permission: op
