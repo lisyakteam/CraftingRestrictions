@@ -28,11 +28,18 @@ public final class Main extends JavaPlugin implements CommandExecutor {
   public void onEnable() {
     LICENSE_KEY = new NamespacedKey(this, "license_id");
 
-    licenses.add(new License("rifle", "производство винтовки", List.of("inhouse_guns:powder_rifle", "_idle")));
     licenses.add(new License("scattergun", "производство дробовика", List.of("inhouse_guns:scattergun", "_idle")));
-    licenses.add(new License("revolver", "производство револьвера", List.of("inhouse_guns:revolver", "_idle")));
     licenses.add(new License("money_green", "производство зеленых купюр", List.of("money", "green")));
     licenses.add(new License("money_yellow", "производство желтых купюр", List.of("money", "yellow")));
+    licenses.add(new License("gunpowder_round", "производство пороховых патрон", List.of("inhouse_guns:gunpowder_round")));
+    licenses.add(new License("gunpowder_shot", "производство пороховой дроби", List.of("inhouse_guns:gunpowder_shot")));
+    licenses.add(new License("tempered_barrel", "производство закаленного ствола", List.of("inhouse_guns:tempered_barrel")));
+    licenses.add(new License("simple_handle", "производство простой рукоятки", List.of("inhouse_guns:simple_handle")));
+    licenses.add(new License("short_stock", "производство короткого приклада", List.of("inhouse_guns:short_stock")));
+    licenses.add(new License("long_stock", "производство длинного приклада", List.of("inhouse_guns:long_stock")));
+    licenses.add(new License("automatic_mechanism", "производство автоматического механизма", List.of("inhouse_guns:automatic_mechanism")));
+    licenses.add(new License("alloyed_tank", "производство легированной емкости", List.of("inhouse_guns:alloyed_tank")));
+    licenses.add(new License("alloyed_barrel", "производство легированной бочки? втф", List.of("inhouse_guns:alloyed_barrel")));
 
     getServer().getPluginManager().registerEvents(new CraftListener(), this);
     getCommand("get-license").setExecutor(this);
